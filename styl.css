@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tytul {
+    background-color: forestgreen;
+    color: white;
+    height: 100px;
+    width: 80%;
+    text-align: center;
+}
+
+#miniatura {
+    background-color: forestgreen;
+    height: 100px;
+    width: 20%;
+    text-align: center;
+}
+
+#lewy {
+    background-color: tan;
+    height: 700px;
+    width: 25%;
+}
+
+#prawy {
+    background-color: tan;
+    height: 700px;
+    width: 75%;
+}
+
+footer {
+    background-color: forestgreen;
+    color: white;
+    text-align: center;
+}
+
+img {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid forestgreen;
+    border-radius: 20px;
+}
+
+img:hover {
+    border-color: maroon;
+}
+
+/* Moje */
+main,
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    margin: 0;
+}

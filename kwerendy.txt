@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT id,nazwa,potoczna FROM grzyby WHERE jadalny=1
+Zapytanie 2: SELECT potoczna, rodzina.nazwa FROM grzyby INNER JOIN rodzina ON grzyby.rodzina_id=rodzina.id WHERE potrawy_id=4
+Zapytanie 3: SELECT nazwa_pliku,nazwa FROM grzyby;
+Zapytanie 4: ALTER TABLE `rodzina` ADD `opis` TEXT;

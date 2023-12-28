@@ -20,18 +20,32 @@
         <div id="lewy">
             <h3>Grzyby jadalne</h3>
             <?php
-            //skrypt1
+            $conn = mysqli_connect('localhost', 'root', '', 'grzybobranie');
+            $q1 = "SELECT id,nazwa,potoczna FROM grzyby WHERE jadalny=1";
+            $res1 = mysqli_query($conn, $q1);
+            foreach ($res1 as $row) {
+                echo "<p>$row[id]. $row[nazwa] ($row[potoczna]) </p>";
+            }
             ?>
             <h3>Polecamy do zup</h3>
             <ul>
                 <?php
-                //skrypt2
+                $q2 = 'SELECT potoczna, rodzina.nazwa FROM grzyby INNER JOIN rodzina ON grzyby.rodzina_id=rodzina.id WHERE potrawy_id=4';
+                $res2 = mysqli_query($conn, $q2);
+                foreach ($res2 as $row) {
+                    echo "<li>$row[potoczna], rodzina: $row[nazwa] </li>";
+                }
                 ?>
             </ul>
         </div>
         <div id="prawy">
             <?php
-            //skrypt3
+            $q3 = 'SELECT nazwa_pliku,nazwa FROM grzyby;';
+            $res3 = mysqli_query($conn, $q3);
+            foreach ($res3 as $row) {
+                echo "<img src='$row[nazwa_pliku]' title='$row[nazwa]'>";
+            }
+            mysqli_close($conn);
             ?>
         </div>
     </main>
